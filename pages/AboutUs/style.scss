@@ -1,0 +1,113 @@
+$red:#EA1C24;
+$black:#292929;
+$gray:#4C4C4C;
+$font:#737373;
+$cat-color:#f0f0f0;
+
+
+@mixin miniTablet-Logo {
+    @media(min-width:600px) and (max-width:700px) {@content;}
+}
+
+@mixin Tablet-Logo {
+    @media(min-width:700px) and (max-width:899px) {@content;}
+}
+
+@mixin Tablet  {
+    @media(min-width:600px)and (max-width:899px) {@content;}
+}
+
+@mixin Desktop1 {
+    @media(min-width:900px) and (max-width:1290px) {@content};
+}
+
+@mixin Desktop2 {
+    @media(min-width:1291px) {@content}
+}
+
+
+.map-container {
+    width:100%;
+    height:40vh;
+    margin:0 auto;
+    padding-bottom:2rem;
+    z-index:1;
+    position:relative;
+}
+
+h1 {
+    padding:1rem;
+    margin-left:1rem;
+    color:$red;
+    font-size:2rem;
+
+    @include Tablet() {
+        margin-left:3rem;
+    }
+
+    @include Desktop1() {
+        margin-left:6.9rem;
+    }
+
+    @include Desktop2() {
+        margin-left:6.9rem;
+
+   }
+   
+}
+
+.contact-info {
+    display: block;
+    width:90%;
+    margin:0 auto;
+
+    @include Tablet() {
+        display:grid;;
+        grid-template-columns: repeat(2,auto);
+    }
+    
+    @include Desktop1() {
+    display:grid;
+    grid-template-columns:repeat(3, auto);
+    padding-bottom:2.5rem;
+    padding-top:1rem;
+    }
+
+    @include Desktop2() {
+        display:grid;
+        grid-template-columns:repeat(3, auto);
+        padding-bottom:2.5rem;
+        padding-top:1rem;
+        width:90%;
+    }
+    
+
+    .box {
+        margin:0 auto;
+        padding:1rem;
+        border-bottom:1px solid $cat-color;
+
+        h3 {
+            margin-bottom:.5rem;
+            font-size:1.3rem;
+            font-weight:500;
+            color:$gray;
+        }
+
+        p {
+            padding:0.5rem 0;
+            color:$font;
+        }
+
+        i {
+            color:#EA1C24;
+        }
+
+        a {
+            text-decoration:none;
+            color:$font;
+            cursor:pointer;
+            z-index:10;
+        }
+    }
+}
