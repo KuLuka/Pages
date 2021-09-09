@@ -1,0 +1,126 @@
+@mixin miniTablet-Logo {
+    @media(min-width:600px) and (max-width:700px) {@content;}
+}
+
+@mixin Tablet-Logo {
+    @media(min-width:700px) and (max-width:899px) {@content;}
+}
+
+@mixin Tablet  {
+    @media(min-width:600px)and (max-width:899px) {@content;}
+}
+
+@mixin Desktop1 {
+    @media(min-width:900px) and (max-width:1290px) {@content};
+}
+
+@mixin Desktop2 {
+    @media(min-width:1291px) {@content}
+}
+
+
+
+.form {
+    margin:2rem 2rem;
+
+    @include Tablet() {
+      width:50%;
+    margin:0 auto;
+    padding-bottom:2rem;
+    padding-top:2rem;  
+    }
+    @include Desktop1() {
+        width:50%;
+      margin:0 auto;
+      padding-bottom:2rem;
+      padding-top:2rem;  
+      }
+
+      @include Desktop2() {
+        width:50%;
+      margin:0 auto;
+      padding-bottom:2rem;
+      padding-top:2rem;  
+      }
+    
+
+    h3 {
+        font-size:2rem;
+        font-weight: 500;
+
+    }
+
+    form {
+        padding:1rem 0;
+
+        h5 {
+            padding:1rem 0 0.5rem 0;
+            font-size:1.2rem;
+            font-weight:400;
+        }
+
+        input {
+            border: none;
+            background:#efefef;
+            padding:1rem;
+            width:100%;
+            border-radius:5px;
+            outline:none;
+            transition:border .5s linear;
+            
+        }
+
+        button {
+            padding:0.5rem 1rem;
+            margin:1rem 0;
+            cursor:pointer;
+            outline:none;
+        }
+
+        .primary {
+            background:#EA1C24;
+            border:none;
+            color:#fff;
+            font-size:1rem;
+            padding:1rem;
+            border-radius:5px;
+            width:150px;
+        }
+
+        p {
+            color:#292929 !important;
+        }
+
+
+        .secondary {
+            border:none;
+            color:#fff;
+            font-size:1rem;
+            padding:1rem;
+            background:#4285F4;
+            border-radius:5px;
+            width:150px;
+        }
+
+        span {
+            color:#EA1C24;
+            font-weight:500;
+            cursor:pointer;
+        }
+        
+    }
+
+    .forgot {
+        font-size:.8rem;
+        padding:.5rem 1rem 1rem 1rem;
+    }
+
+    
+
+}
+
+
+.border-top {
+    width:100%;
+    border-top:1px solid #cecece;
+}
